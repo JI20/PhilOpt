@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    --background : rgb(36, 36, 36);
+    --darkblue : #3A0CA3;
+    --purple : #7209B7;
+    --pink : #F72585;
+    --lightblue : #4361EE;
+    --babypink : #F7C1BB;
+    --verylightblue : #4CC9F0;
+    
+    
+    background: var(--background);
+}
+
+.HomeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonInput {
+    background: var(--rose);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    font-family: 'Roboto';
+    width: 94%;
+    height: 45px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.TextInput::placeholder {
+    color: var(--blue);
+    font-size: 14;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.TextInput:focus {
+
+}
