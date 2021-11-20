@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.activeLink {
+    color:var(--rose) !important;
+}
+a, p, h1, span, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.Container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header {
+    --blue: #0c13c1;
+    --rose: #dd8ca5;
+    --accentOpacity: #dd8ca69d;
+
+    --background : rgb(36, 36, 36);
+    --darkblue : #3A0CA3;
+    --purple : #7209B7;
+    --pink : #F72585;
+    --lightblue : #4361EE;
+    --babypink : #F7C1BB;
+    --verylightblue : #4CC9F0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.navBar li, .navBar a, .navHeader span{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+.navHeader h1, .navHeader span {
+    font-size: 16px;
+}
+.navHeader input[type="button"] {
+    padding: 9px 25px;
+    background: var(--rose);
+    font-size: 16px;
+    border: none;
+    box-shadow: white 8px 8px 0px;
+    transition: all 0.3s ease 0s;
+    font-family: "Roboto";
+    font-weight: 500;
+    border: 4px solid var(--rose);
+    cursor: pointer;
+}
+
+.navHeader input[type="button"]:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.navLinks {
+    list-style: none;
+}
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+    border: 3px solid var(--babypink);
+    padding: 12px 12px;
+    border-radius: 40px;
+}
+
+.navLinks li a:hover {
+    color:var(--babypink);
+    background: var(--lightblue);
+}
+
+.LogoutContainer span {
+    padding-right: 10px;
+}

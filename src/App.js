@@ -7,8 +7,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
-            <Route path="/about" element={"TEst"}/>
-            <Route path="/donate" element={"Test"}/>
+            <Route path="/about" element={"We are a Team of Students participating in HackaTUM 21"}/>
           </Routes>
         </BrowserRouter>
       </>
