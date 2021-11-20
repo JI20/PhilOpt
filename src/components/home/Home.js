@@ -1,14 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './Home.css'
 import Logo from "../../ressources/Logo_Blau.png"
 import { buttons, contributionWays} from './_config'
 import $ from 'jquery'
-
-const options = {
-    chars: ["_"],
-    interval: 20
-};
-
 
 export default function Home() {
 
