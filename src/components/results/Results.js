@@ -1,14 +1,10 @@
 import React from 'react'
-import { firestore } from '../../firebase'
-import { collection, query } from '@firebase/firestore'
 import Result from './Result'
 import {useCollectionData} from 'react-firebase9-hooks/firestore'
 
-export default function Results() {
-    const resultsRef= collection(firestore, 'projects')
-    const q = query(resultsRef);
+export default function Results({query}) {
 
-    const [results] = useCollectionData(q, {idField: 'id'});
+    const [results] = useCollectionData(query, {idField: 'id'});
     
     return (
         <div className="ResultListContainer">

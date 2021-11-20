@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Home.css'
 import Logo from "../../ressources/Logo_Blau.png"
 import { buttons, contributionWays} from './_config'
@@ -7,38 +7,60 @@ import Results from '../results/Results'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { animationFade, animationTransition } from '../animations/Animation'
+import { firestore } from '../../firebase'
+import { collection, query, where } from '@firebase/firestore'
 //import { useCollectionData } from 'react-firebase9-hooks/firestore'
+var enabled = "all"
 
 export default function Home() {
     
     // Changing topics
-
-    function handleTopicChange(props) {
-        const topic = props
+    const resultsRef= collection(firestore, 'projects')
+    const [q, setQuery] = useState(query(resultsRef))
+    
+    function handleTopicChange(id, text, type) {
+        console.log("ID "+id)
+        console.log("EN: "+ enabled)
+        if(enabled === id) {
+           // Self clicked enabled button
+            enabled = "all"
+           $('#'+id+"Button").toggleClass("TopicButtonsEnabled")
+           setQuery(query(resultsRef))
+           return
+        }
         
-        // Coloring the Buttons
-        $('#'+topic+"Button").toggleClass("TopicButtonsEnabled")
-
-
-        
-        
-        // Changing the actual topcis
-
+        if(enabled === "all") {
+            // Clicked button when no other button is clicked
+            enabled = id
+            console.log("Changed to: " + enabled)
+            $('#'+id+"Button").toggleClass("TopicButtonsEnabled")
+            setQuery(query(resultsRef, where(type, "==", text)))
+            return
+        }
+        else {
+            // Switch the color of the one before to be grey
+            $('#'+enabled+"Button").toggleClass("TopicButtonsEnabled")
+            // Switch the color of the new one to be on
+            $('#'+id+"Button").toggleClass("TopicButtonsEnabled")
+            enabled = id
+            // set the specific query
+            setQuery(query(resultsRef, where(type, "==", text)))
+        }
     }
     
     const topics = buttons.map(name => {
-        return <li><input id={name.id+"Button"} className="TopicButtonsDisabled" type="button" value={name.text} onClick={e => handleTopicChange(name.id)}/></li>
+        return <li><input id={name.id+"Button"} className="TopicButtonsDisabled" type="button" value={name.text} onClick={e => handleTopicChange(name.id, name.text, "category")}/></li>
     })
 
     const contribution = contributionWays.map(name => {
-        return <li><input id={name.id+"Button"} className="TopicButtonsDisabled" type="button" value={name.text} onClick={ e => handleTopicChange(name.id)} /></li>
+        return <li><input id={name.id+"Button"} className="TopicButtonsDisabled" type="button" value={name.text} onClick={ e => handleTopicChange(name.id, name.text, "search")} /></li>
     })
 
     return (
         <motion.div exit="out" animate="in" initial="out" variants={animationFade} transition={animationTransition}>
             <div className= "HomeContainer">
                 <div className="Results">
-                    <Results></Results>
+                    <Results query={q}></Results>
                 </div> 
                 <div className="InfoPanel">
                     <div className="LogoContainer">

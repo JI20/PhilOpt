@@ -14,7 +14,7 @@ export default function Result({props}) {
                     <a className="Names" target="_blank" rel="noopener noreferrer" href={link(website)}>{name}</a>
                     <div className="Seperator"></div>
                     <p>{description}</p>
-                    <p>{location}</p>
+                    <div className="WhereFind"><p>Location: {location}</p><a target="_blank" rel="noopener noreferrer" href={link(website)}>Learn more</a></div>
                 </div>
             </div> 
         </li>

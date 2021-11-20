@@ -212,3 +212,29 @@ a::selection, p::selection, h1::selection {
 .ResultList a:hover {
     color: var(--blue);
 }
+
+.WhereFind {
+
+}
+
+.WhereFind a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    background: var(--blue);
+    border-radius: 25px;
+    border: 3px solid var(--background);
+    padding: 4px 20px;
+    float: right;
+}
+
+.WhereFind a:hover {
+    color: white !important;
+    background: var(--lightblue);
+}
+
+.WhereFind p {
+    float: left;
+}
