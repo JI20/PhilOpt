@@ -34,7 +34,7 @@ body {
     background-color: var(--babypink);
 }
 
-.WorldMap {
+.Results {
     width: 60vw;
     height: 100vh;
     background-color: var(--background);
@@ -147,4 +147,59 @@ body {
 .inputd {
     width: 100%;
     height: 50px;
+}
+
+.ResultList {
+    width: 90%;
+    list-style-position: inside;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.ResultContainer {
+    background: var(--babypink);
+    border-radius: 0;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.Result {
+    width: 90%;
+}
+
+.ResultListContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ResultList li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.ResultList a, .ResultList p {
+    font-family: 'Montserrat';
+    color: var(--background);
+    font-size: 18px;
+}
+
+a::selection, p::selection, h1::selection {
+    background: var(--blue);
+    color: white;
+}
+
+.ResultList a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.ResultList a:hover {
+    color: var(--blue);
 }
