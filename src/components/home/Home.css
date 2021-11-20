@@ -18,6 +18,10 @@ body {
     overflow: hidden;
 }
 
+a,p,h1 {
+    font-family: 'Montserrat';
+}
+
 /* Container for everything, the left and right side*/
 .HomeContainer {
     width: 100%;
@@ -131,7 +135,28 @@ body {
     height: 50px;
 }
 
-/*Right panels content*/
+#AboutLinkContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#AboutLink {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 30px;
+    background: var(--blue);
+    border-radius: 20px;
+    border: 3px solid var(--background);
+    padding: 4px 20px;
+}
+
+#AboutLink:hover {
+    background: var(--lightblue);
+}
+
+/*Left panels content*/
 
 .ResultList {
     width: 90%;

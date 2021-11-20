@@ -12,12 +12,53 @@ body{
     --blue: #0c13c1;
 }
 
+.AboutContainerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--babypink);
+}
+
 .AboutContainer {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background: var(--babypink);
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.About {
+    margin-left: 0;
+    width: 80%;
+
+}
+.About li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.HomeLinkContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#HomeLink {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    background: var(--blue);
+    border-radius: 20px;
+    border: 3px solid var(--background);
+    padding: 4px 20px;
+}
+
+#HomeLink:hover {
+    background: var(--lightblue);
 }

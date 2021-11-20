@@ -4,6 +4,9 @@ import Logo from "../../ressources/Logo_Blau.png"
 import { buttons, contributionWays} from './_config'
 import $ from 'jquery'
 import Results from '../results/Results'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { animationFade, animationTransition } from '../animations/Animation'
 //import { useCollectionData } from 'react-firebase9-hooks/firestore'
 
 export default function Home() {
@@ -32,34 +35,37 @@ export default function Home() {
     })
 
     return (
-        <>
-        <div className= "HomeContainer">
-            <div className="Results">
-                <Results></Results>
-            </div> 
-            <div className="InfoPanel">
-                <div className="LogoContainer">
-                    <img alt="Logo"id="Logo" src={Logo} width="100" height="100"/>
-                    <p id="LogoName">PhilOpt</p>
-                </div>
-                <div className="InfoContent">
-                    <div id="Seperator1" className="Seperator"></div>
-                    <h1 className="Question">Where do you want to help?</h1>
-                    <div className="Buttons">
-                        <ul>
-                            {topics}
-                        </ul>
+        <motion.div exit="out" animate="in" initial="out" variants={animationFade} transition={animationTransition}>
+            <div className= "HomeContainer">
+                <div className="Results">
+                    <Results></Results>
+                </div> 
+                <div className="InfoPanel">
+                    <div className="LogoContainer">
+                        <img alt="Logo"id="Logo" src={Logo} width="100" height="100"/>
+                        <p id="LogoName">PhilOpt</p>
                     </div>
-                    <div className="Seperator"></div>
-                    <h1 className="Question">Already know how to help?</h1>
-                    <div className="Buttons">
-                        <ul>
-                            {contribution}
-                        </ul>
+                    <div className="InfoContent">
+                        <div id="Seperator1" className="Seperator"></div>
+                        <h1 className="Question">Where do you want to help?</h1>
+                        <div className="Buttons">
+                            <ul>
+                                {topics}
+                            </ul>
+                        </div>
+                        <div className="Seperator"></div>
+                        <h1 className="Question">Already know how to help?</h1>
+                        <div className="Buttons">
+                            <ul>
+                                {contribution}
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="AboutLinkContainer">
+                        <Link id="AboutLink" to="/about">About us</Link>
                     </div>
                 </div>
             </div>
-        </div>
-        </>
+        </motion.div>
     )
 }
