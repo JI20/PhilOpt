@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Home.css'
 import Logo from "../../ressources/Logo_Blau.png"
 import { buttons, contributionWays} from './_config'
