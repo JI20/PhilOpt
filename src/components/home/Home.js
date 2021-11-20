@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import { useDencrypt } from "use-dencrypt-effect"
 import './Home.css'
 import Logo from "../../ressources/Logo_Blau.png"
 import { buttons, contributionWays} from './_config'
@@ -12,12 +11,6 @@ const options = {
 
 
 export default function Home() {
-    // Use the effect of changing text
-    const { result, dencrypt } = useDencrypt(options);
-
-    useEffect(() => {
-        dencrypt("We help you to help")
-    }, [])
 
     // Changing topics
 
@@ -48,12 +41,12 @@ export default function Home() {
         <div className= "HomeContainer">
             <div className="WorldMap">
                 <div className="Slogan">
-                    <p id="ChangingText">{result}</p>
+                    
                 </div>
             </div> 
             <div className="InfoPanel">
                 <div className="LogoContainer">
-                    <img id="Logo" src={Logo} width="100" height="100"/>
+                    <img alt="Logo"id="Logo" src={Logo} width="100" height="100"/>
                     <p id="LogoName">PhilOpt</p>
                 </div>
                 <div className="InfoContent">
