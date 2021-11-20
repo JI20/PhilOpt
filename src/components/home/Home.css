@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
 
+/* Overall colors*/
 body {
     --background : rgb(36, 36, 36);
     --backgroundLite : rgb(85, 85, 85);
@@ -17,6 +18,7 @@ body {
     overflow: hidden;
 }
 
+/* Container for everything, the left and right side*/
 .HomeContainer {
     width: 100%;
     height: 100%;
@@ -28,12 +30,14 @@ body {
     z-index: 0;
 }
 
+/*Right panel*/
 .InfoPanel {
     width: 40vw;
     height: 100vh;
     background-color: var(--babypink);
 }
 
+/*Left panel*/
 .Results {
     width: 60vw;
     height: 100vh;
@@ -42,6 +46,7 @@ body {
     justify-content: center;
 }
 
+/*Right panel content*/
 .ButtonInput {
     background: var(--rose);
     border: 3px solid rgb(255, 255, 255);
@@ -52,17 +57,6 @@ body {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-}
-
-.TextInput::placeholder {
-    color: var(--blue);
-    font-size: 14;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.TextInput:focus {
-
 }
 
 #LogoName {
@@ -84,18 +78,6 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-}
-
-.Slogan {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-#ChangingText {
-    font-family: 'Azeret Mono', monospace;
-    color: white;
-    font-size: 2rem;
 }
 
 .TopicButtonsDisabled {
@@ -148,6 +130,8 @@ body {
     width: 100%;
     height: 50px;
 }
+
+/*Right panels content*/
 
 .ResultList {
     width: 90%;
