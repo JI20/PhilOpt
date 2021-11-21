@@ -35,11 +35,24 @@ a,p,h1 {
 }
 
 /*Right panel*/
-.InfoPanel {
+@media only screen and (min-width: 900px){
+    .InfoPanel {
     width: 40vw;
     height: 100vh;
     background-color: var(--babypink);
+    }
 }
+/*Responsiveness*/
+@media only screen and (max-width: 900px){
+    .InfoPanel {
+        display: none;
+    }
+
+    .Results {
+        width: 100% !important;
+    }
+}
+
 
 /*Left panel*/
 .Results {
