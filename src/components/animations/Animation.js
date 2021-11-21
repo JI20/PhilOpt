@@ -7,8 +7,18 @@ export const animationFade = {
       opacity: 0,
     }
   };
+
+  export const animationSlide = {
+    in: {
+      x: 0,
+    },
+  
+    out: {
+      x: "-100vw",
+    }
+  };
   
   export const animationTransition = {
-    duration: 0.5,
+    duration: 0.3,
     transition: "linear"
   }

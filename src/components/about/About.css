@@ -31,7 +31,8 @@ body{
 
 .About {
     margin-left: 0;
-    width: 80%;
+    width: 60%;
+    max-width: 500px;
 
 }
 .About li{

@@ -7,8 +7,6 @@ export const buttons = [
 ]
 
 export const contributionWays = [{text: "Providing skill", id:"skill"}, 
-    {text: "Spending time", id:"time"}, 
     {text: "Donating money", id:"money"}, 
-    {text:"Donating goods", id:"goods"}, 
-    {text:"Help organize Projects", id:"orgaize"},
+    {text:"Donating goods", id:"goods"},
 ]

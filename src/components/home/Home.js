@@ -76,7 +76,7 @@ export default function Home() {
                             </ul>
                         </div>
                         <div className="Seperator"></div>
-                        <h1 className="Question">Already know how to help?</h1>
+                        <h1 className="Question">Or how do you want to help?</h1>
                         <div className="Buttons">
                             <ul>
                                 {contribution}
